@@ -1,0 +1,20 @@
+Jennys-MacBook-Air-2:Desktop lee37$ DojoAssignments
+-bash: DojoAssignments: command not found
+Jennys-MacBook-Air-2:Desktop lee37$ mkdir DojoAssignments
+Jennys-MacBook-Air-2:Desktop lee37$ cd DojoAssignments/
+Jennys-MacBook-Air-2:DojoAssignments lee37$ mkdir WebFundamentals Python MEAN Ruby iOS netCore
+Jennys-MacBook-Air-2:DojoAssignments lee37$ open .
+Jennys-MacBook-Air-2:DojoAssignments lee37$ touch WebFundamentals/about.txt Python/about.txt MEAN/about.txt Ruby/about.txt iOS/about.txt netCore/about.txt
+Jennys-MacBook-Air-2:DojoAssignments lee37$ open .
+Jennys-MacBook-Air-2:DojoAssignments lee37$ cd WebFundamentals/
+Jennys-MacBook-Air-2:WebFundamentals lee37$ mkdir Git HTML CSS Javascript
+Jennys-MacBook-Air-2:WebFundamentals lee37$ open .
+Jennys-MacBook-Air-2:WebFundamentals lee37$ touch Git/about.txt HTML/about.txt CSS/about.txt Javascript/about.txt
+Jennys-MacBook-Air-2:WebFundamentals lee37$ open .
+Jennys-MacBook-Air-2:WebFundamentals lee37$ cd HTML
+Jennys-MacBook-Air-2:HTML lee37$ touch indentation.html
+Jennys-MacBook-Air-2:HTML lee37$ ls -R
+about.txt		indentation.html
+Jennys-MacBook-Air-2:HTML lee37$ touch assignments.txt
+Jennys-MacBook-Air-2:HTML lee37$ open .
+Jennys-MacBook-Air-2:HTML lee37$ 
