@@ -1,0 +1,135 @@
+Jennys-MacBook-Air-2:gittest lee37$ clear
+
+Jennys-MacBook-Air-2:gittest lee37$ pwd
+/Users/lee37/Desktop/gittest
+Jennys-MacBook-Air-2:gittest lee37$ cd ~
+Jennys-MacBook-Air-2:~ lee37$ cd Desktop/
+Jennys-MacBook-Air-2:Desktop lee37$ ls
+2016 Coursera R	NLP		Temp-photos	ch1.py		data		form-test.html	google-python	mystuff		portfolio.html
+DojoAssignments	NewDir		assn0		commands.txt	data2		gittest		index.html	portfolio.css	test
+Jennys-MacBook-Air-2:Desktop lee37$ cd DojoAssignments/
+Jennys-MacBook-Air-2:DojoAssignments lee37$ git init
+Initialized empty Git repository in /Users/lee37/Desktop/DojoAssignments/.git/
+Jennys-MacBook-Air-2:DojoAssignments lee37$ ls
+MEAN		Python		Ruby		WebFundamentals	commands.txt	iOS		netCore
+Jennys-MacBook-Air-2:DojoAssignments lee37$ touch readme.md
+Jennys-MacBook-Air-2:DojoAssignments lee37$ git add readme.md
+Jennys-MacBook-Air-2:DojoAssignments lee37$ git commit -m "added readme.md"
+[master (root-commit) 9fc99c1] added readme.md
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 readme.md
+Jennys-MacBook-Air-2:DojoAssignments lee37$ vim readme.md 
+Jennys-MacBook-Air-2:DojoAssignments lee37$ open .
+Jennys-MacBook-Air-2:DojoAssignments lee37$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   readme.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	MEAN/
+	Python/
+	Ruby/
+	WebFundamentals/
+	commands.txt
+	iOS/
+	netCore/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Jennys-MacBook-Air-2:DojoAssignments lee37$ git add .
+Jennys-MacBook-Air-2:DojoAssignments lee37$ git commit -m "added a bunch of DojoAssignments folders"
+[master f5d4648] added a bunch of DojoAssignments folders
+ 15 files changed, 46 insertions(+)
+ create mode 100644 MEAN/about.txt
+ create mode 100644 Python/about.txt
+ create mode 100644 Ruby/about.txt
+ create mode 100644 WebFundamentals/CSS/about.txt
+ create mode 100644 WebFundamentals/Git/about.txt
+ create mode 160000 WebFundamentals/Git/new_project
+ create mode 100644 WebFundamentals/HTML/about.txt
+ create mode 100644 WebFundamentals/HTML/assignments.txt
+ create mode 100644 WebFundamentals/HTML/indentation.html
+ create mode 100644 WebFundamentals/Javascript/about.txt
+ create mode 100644 WebFundamentals/about.txt
+ create mode 100644 commands.txt
+ create mode 100644 iOS/about.txt
+ create mode 100644 netCore/about.txt
+Jennys-MacBook-Air-2:DojoAssignments lee37$ git status
+On branch master
+nothing to commit, working tree clean
+Jennys-MacBook-Air-2:DojoAssignments lee37$ git log
+commit f5d4648d65bac09ddc40c46db327a4f6df776e46
+Author: dzenilee <dzenilee@gmail.com>
+Date:   Sun Mar 5 18:49:17 2017 -0800
+
+    added a bunch of DojoAssignments folders
+
+commit 9fc99c1319bc38bb1cee6a260f5fb62725ad7c32
+Author: dzenilee <dzenilee@gmail.com>
+Date:   Sun Mar 5 18:47:49 2017 -0800
+
+    added readme.md
+Jennys-MacBook-Air-2:DojoAssignments lee37$ git add readme.md
+Jennys-MacBook-Air-2:DojoAssignments lee37$ git commit -m "modified readme.md"
+On branch master
+nothing to commit, working tree clean
+Jennys-MacBook-Air-2:DojoAssignments lee37$ git log 
+commit f5d4648d65bac09ddc40c46db327a4f6df776e46
+Author: dzenilee <dzenilee@gmail.com>
+Date:   Sun Mar 5 18:49:17 2017 -0800
+
+    added a bunch of DojoAssignments folders
+
+commit 9fc99c1319bc38bb1cee6a260f5fb62725ad7c32
+Author: dzenilee <dzenilee@gmail.com>
+Date:   Sun Mar 5 18:47:49 2017 -0800
+
+    added readme.md
+Jennys-MacBook-Air-2:DojoAssignments lee37$ git diff
+Jennys-MacBook-Air-2:DojoAssignments lee37$ git remote add origin https://github.com/dzenilee/DojoAssignments.git
+Jennys-MacBook-Air-2:DojoAssignments lee37$ git push -u origin master
+Counting objects: 12, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (12/12), 1.54 KiB | 0 bytes/s, done.
+Total 12 (delta 0), reused 0 (delta 0)
+To https://github.com/dzenilee/DojoAssignments.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+Jennys-MacBook-Air-2:DojoAssignments lee37$ vim readme.md 
+Jennys-MacBook-Air-2:DojoAssignments lee37$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   readme.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Jennys-MacBook-Air-2:DojoAssignments lee37$ git add readme.md
+Jennys-MacBook-Air-2:DojoAssignments lee37$ git commit -m "modified readme.md some more" 
+[master e454833] modified readme.md some more
+ 1 file changed, 1 insertion(+)
+Jennys-MacBook-Air-2:DojoAssignments lee37$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+Jennys-MacBook-Air-2:DojoAssignments lee37$ git remote add origin https://github.com/dzenilee/DojoAssignments
+fatal: remote origin already exists.
+Jennys-MacBook-Air-2:DojoAssignments lee37$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 315 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/dzenilee/DojoAssignments.git
+   f5d4648..e454833  master -> master
+Branch master set up to track remote branch master from origin.
+Jennys-MacBook-Air-2:DojoAssignments lee37$ 
