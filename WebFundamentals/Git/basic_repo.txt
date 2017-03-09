@@ -1,0 +1,55 @@
+
+Jennys-MacBook-Air-2:Git lee37$ mkdir basic_repo
+Jennys-MacBook-Air-2:Git lee37$ touch some_file1.txt some_file2.txt
+Jennys-MacBook-Air-2:Git lee37$ vim some_file1.txt
+Jennys-MacBook-Air-2:Git lee37$ vim some_file2.txt
+Jennys-MacBook-Air-2:Git lee37$ git add some_file1.txt
+Jennys-MacBook-Air-2:Git lee37$ git commit -m "added content to some_file1.txt"
+[master e2975d5] added content to some_file1.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 WebFundamentals/Git/some_file1.txt
+Jennys-MacBook-Air-2:Git lee37$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	branching_test/
+	some_file2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Jennys-MacBook-Air-2:Git lee37$ git add some_file2.txt
+Jennys-MacBook-Air-2:Git lee37$ git commit -m 'added content to file2.txt'
+[master 1ea5282] added content to file2.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 WebFundamentals/Git/some_file2.txt
+Jennys-MacBook-Air-2:Git lee37$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	branching_test/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Jennys-MacBook-Air-2:Git lee37$ vim some_file1.txt
+Jennys-MacBook-Air-2:Git lee37$ git add some_file1.txt
+Jennys-MacBook-Air-2:Git lee37$ git commit 'modified file1.txt some more'
+error: pathspec 'modified file1.txt some more' did not match any file(s) known to git.
+Jennys-MacBook-Air-2:Git lee37$ git commit -m 'modified file1.txt some more'
+[master b37c085] modified file1.txt some more
+ 1 file changed, 1 insertion(+)
+Jennys-MacBook-Air-2:Git lee37$ git branch
+* master
+Jennys-MacBook-Air-2:Git lee37$ git push dojo master
+Counting objects: 15, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (15/15), 1.21 KiB | 0 bytes/s, done.
+Total 15 (delta 8), reused 0 (delta 0)
+remote: Resolving deltas: 100% (8/8), completed with 2 local objects.
+To https://github.com/CodingDojoOnline-March2017/JennyRepo.git
+   dbe8ae7..b37c085  master -> master
+Jennys-MacBook-Air-2:Git lee37$
