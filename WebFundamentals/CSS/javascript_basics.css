@@ -1,0 +1,31 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+#container{
+  width: 950px;
+  background-color: blue;
+  margin: 0px auto;
+  padding: 10px;
+}
+
+.rounded{
+  border-radius: 20px;
+  padding: 20px;
+}
+
+#header{
+  height: 80px;
+  background-color: red;
+  color: white;
+  font-size: 40px;
+  display: table-cell; /*to vertical-align text*/
+
+}
+
+#nav{
+  height: 300px;
+  background-color: #54DF99;
+  display: inline-block;
+}
