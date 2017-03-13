@@ -3,11 +3,16 @@
   padding: 0px;
 }
 
-#container{
-  width: 950px;
-  background-color: blue;
-  margin: 0px auto;
-  padding: 10px;
+a{
+  color: #00FFFF;
+}
+
+ul{
+  padding-left: 20px;
+}
+
+.special{
+  color: blue;
 }
 
 .rounded{
@@ -15,17 +20,47 @@
   padding: 20px;
 }
 
+#container{
+  width: 1000px;
+  background-color: darkblue;
+  margin: 0px auto;
+  padding: 10px;
+}
+
 #header{
-  height: 80px;
+  /*height: 40px; if you don't set height, it'll auto-fit!*/
   background-color: red;
   color: white;
-  font-size: 40px;
-  display: table-cell; /*to vertical-align text*/
+  width: 950px;
+  /*vertical-align: middle;*/
+  margin-bottom: 15px;
+}
 
+#main{
+  width: 95%;
 }
 
 #nav{
-  height: 300px;
-  background-color: #54DF99;
+  background-color: #008B8B;
   display: inline-block;
+  vertical-align: top;
+  padding: 15px;
+
+}
+
+#content{
+  background-color: black;
+  color: white;
+  display: inline-block;
+  width: 740px;
+  vertical-align: top;
+  padding: 15px;
+  margin-left: 15px;
+}
+
+
+#bottom{
+  background-color: gray;
+  margin-top: 15px;
+  color: #F0F8FF;
 }
