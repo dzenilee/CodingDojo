@@ -3,18 +3,44 @@
   padding: 0px;
 }
 
+h1{
+  margin: auto;
+  display: inline-block;
+  font-family: "Comic Sans MS", sans-serif;
+}
+
+h2{
+  display: inline-block;
+  float: right;
+  font-family: "Arial", sans-serif;
+}
+
 p{
   font-size: 13px;
   font-family: sans-serif;
 }
 
+a{
+  font-style: italic;
+  color: gray;
+}
+
 #container{
-  width: 800px;
+  width: 1200px;
   height: 1100px;
 }
 
+#head{
+  padding: 5px;
+  vertical-align: middle;
+}
+
 #main{
-  background-color: purple;
+  background: #d3abd0;
+  background: -moz-radial-gradient(center, ellipse cover, #d3abd0 0%, #56274f 60%, #3f2143 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #d3abd0 0%,#56274f 60%,#3f2143 100%);
+  background: radial-gradient(ellipse at center, #d3abd0 0%,#56274f 60%,#3f2143 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3abd0', endColorstr='#3f2143',GradientType=1 );
   height: auto;
   padding: 10px;
   font-family: sans-serif;
@@ -29,19 +55,57 @@ p{
   display: inline-block;
 }
 
+
+.header{
+  background: #596a72;
+  background: -moz-radial-gradient(center, ellipse cover, #596a72 0%, #cedce7 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #596a72 0%,#cedce7 100%);
+  background: radial-gradient(ellipse at center, #596a72 0%,#cedce7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#596a72', endColorstr='#cedce7',GradientType=1 );
+  color: white;
+  width: inherit;
+  padding: 5px;
+}
+
+.content{
+  /*background-color: white;*/
+  width: 250px;
+  background: rgb(228,190,229);
+  background: -moz-linear-gradient(-45deg, rgba(228,190,229,1) 100%, rgba(200,94,199,1) 100%, rgba(168,73,163,1) 100%, rgba(200,94,199,1) 100%);
+  background: -webkit-linear-gradient(-45deg, rgba(228,190,229,1) 100%,rgba(200,94,199,1) 100%,rgba(168,73,163,1) 100%,rgba(200,94,199,1) 100%);
+  background: linear-gradient(135deg, rgba(228,190,229,1) 100%,rgba(200,94,199,1) 100%,rgba(168,73,163,1) 100%,rgba(200,94,199,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4bee5', endColorstr='#c85ec7',GradientType=1 );
+  display: inline-block;
+  height: auto;
+  padding: 0 0 5 0;  /*on the bottom only*/
+}
+
+#box6, #box7, #box8 > .content{
+  padding: 0 0 15px 0;
+}
+
+.content_text{
+  height: 160px;
+  width: 230px;
+  padding: 10px;
+}
+
+.content_img{
+  width: inherit;
+  display: inline-block;
+  padding: 0px;
+}
+
 #box1, #box2{
   display: inline-block;
   vertical-align: top;
   margin: 5px;
-  height: 200px;
-}
-
-#box1, #box2> .content{ /* This overrides more general .content*/
-  height: 100px;
+  height: auto;
 }
 
 #box2> .content { /* This overrides more general .content*/
   width: 400px;
+  padding: 5px;
 }
 
 #box2> .header{ /* This overrides more general .header*/
@@ -55,15 +119,6 @@ p{
   /*height: 400px; if you set this, lots of space below these boxes*/
 }
 
-.content_text{
-  height: 200px;
-  width: inherit;
-}
-
-.content_img{
-  width: inherit;
-  display: inline-block;
-}
 
 #box6, #box7, #box8{
   display: inline-block;
@@ -71,54 +126,37 @@ p{
   margin: 0px 5px 5px 5px;
 }
 
-#box6, #box7, #box8> .icons { /* This overrides more general .content*/
-  height: 50px;
-}
 
 .icons{
   width: 210px;
+  padding: 10px 0px ;
+  margin: auto;
 }
 
 .icon{
-  width: 30px;
-  margin: 2px;
-
-}
-
-.content{
-  background-color: white;
-  width: 220px;
-  /*height: 300px;*/
-  display: inline-block;
-  padding: 5px;
-}
-
-.header{
-  background-color: gray;
-  color: white;
-  width: inherit;
-  padding: 5px;
-}
-
-.green_button{
-  width: 50px;
-  height: 20px;
-  border-radius: 15px;
-  background-color: green;
+  width: 32px;
+  margin: 3px;
 }
 
 .button_text{
+  border: 1px solid black;
+  box-shadow: 5px 5px 10px gray;  /*the last # is blur specification*/
+  background-color: rgb(43, 82, 51);
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
   font-size: 10px;
-  vertical-align: middle;
-  justify-content: center;
+  margin: auto; /*centers the button */
+  display: table; /*shrinks the size of box to text size & centers box*/
 }
 
 #footer{
   text-align: center;
   height: auto;
+  padding: 5px;
 }
 
 nav> a> img{
-  width: 20px;
+  width: 15px;
   vertical-align: bottom;
 }
