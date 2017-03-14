@@ -1,0 +1,124 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+p{
+  font-size: 13px;
+  font-family: sans-serif;
+}
+
+#container{
+  width: 800px;
+  height: 1100px;
+}
+
+#main{
+  background-color: purple;
+  height: auto;
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+#photo_me{
+  width: 300px;
+  border-color: gray;
+  border: 5px gray solid;
+  vertical-align: top;
+  /*margin: 5px;*/
+  display: inline-block;
+}
+
+#box1, #box2{
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px;
+  height: 200px;
+}
+
+#box1, #box2> .content{ /* This overrides more general .content*/
+  height: 100px;
+}
+
+#box2> .content { /* This overrides more general .content*/
+  width: 400px;
+}
+
+#box2> .header{ /* This overrides more general .header*/
+  width: 400px;
+}
+
+#box3, #box4, #box5{
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px 5px 0px 5px;
+  /*height: 400px; if you set this, lots of space below these boxes*/
+}
+
+.content_text{
+  height: 200px;
+  width: inherit;
+}
+
+.content_img{
+  width: inherit;
+  display: inline-block;
+}
+
+#box6, #box7, #box8{
+  display: inline-block;
+  vertical-align: top;
+  margin: 0px 5px 5px 5px;
+}
+
+#box6, #box7, #box8> .icons { /* This overrides more general .content*/
+  height: 50px;
+}
+
+.icons{
+  width: 210px;
+}
+
+.icon{
+  width: 30px;
+  margin: 2px;
+
+}
+
+.content{
+  background-color: white;
+  width: 220px;
+  /*height: 300px;*/
+  display: inline-block;
+  padding: 5px;
+}
+
+.header{
+  background-color: gray;
+  color: white;
+  width: inherit;
+  padding: 5px;
+}
+
+.green_button{
+  width: 50px;
+  height: 20px;
+  border-radius: 15px;
+  background-color: green;
+}
+
+.button_text{
+  font-size: 10px;
+  vertical-align: middle;
+  justify-content: center;
+}
+
+#footer{
+  text-align: center;
+  height: auto;
+}
+
+nav> a> img{
+  width: 20px;
+  vertical-align: bottom;
+}
