@@ -77,12 +77,12 @@ a{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4bee5', endColorstr='#c85ec7',GradientType=1 );
   display: inline-block;
   height: auto;
-  padding: 0 0 5 0;  /*on the bottom only*/
+  padding: 0 0 15px 0;  /*on the bottom only*/
 }
-
-#box6, #box7, #box8 > .content{
+/*
+#box6 > .content, #box7 > .content, #box8 > .content{
   padding: 0 0 15px 0;
-}
+}*/
 
 .content_text{
   height: 160px;
