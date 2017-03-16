@@ -3,14 +3,12 @@
   padding: 0;
 }
 
-
 #container{
   background: linear-gradient(#1e405d, #3776ab);
   width: 970px;
   height: auto;
   font-family: sans-serif;
 }
-
 
 #header{
   padding-top: 5px;
