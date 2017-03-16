@@ -19,14 +19,14 @@
 }
 
 #header a{
-  color: yellow;
+  color: #ffd343;
 }
 
 #text_size{
   text-align: right;
   margin: 5px;
+  font-size: 9pt;
 }
-
 
 img{
   width: 200px;
@@ -36,29 +36,25 @@ img{
 }
 
 #search_border{
-  height: 50px;
-  width: 200px;
+  height: 25px;
+  width: auto;
   background-color: #1e2933;
   float: right;
   margin: 5px;
-  display: block;
+  padding: 15px;
+  border-radius: 10px;
 }
 
 #search_box{
-  /*display: table-cell; */
   float: right;
-  vertical-align: middle;
-  text-align: center;
-  width: inherit;
+  width: auto;
   margin: auto;
-  margin: 5px;
   display: table-cell;
 }
 
 #search{
   -webkit-appearance: textfield;
   padding: 5px;
-  /*margin-right: 5px;*/
   text-align: center;
   color: lightgray;
   margin: 0 auto;
@@ -86,6 +82,20 @@ img{
   text-align: center;
 }
 
+.yellow_bullet{
+  color: #ffd343;
+  font-size: 9px;
+  /*display: block;*/
+}
+
+#left_bar li{
+  list-style-type: none; /*remove bullets*/
+}
+
+#left_bar a{
+  color: white;
+}
+
 #left_bar{
   height: auto;
   width: 200px;
@@ -94,10 +104,6 @@ img{
   padding: 20px;
   list-style: inside;
   line-height: 30px;
-}
-
-#left_bar li a{
-  color: white;
 }
 
 #main_blue{
@@ -114,7 +120,7 @@ img{
 }
 
 h4{
-  color: yellow;
+  color: #ffd343;
   font-style: italic;
   line-height: 30px;
 }
@@ -144,7 +150,7 @@ h5{
   display: inline-block;
   width: 405px;
   text-align: center;
-  margin: 5px auto;
+  margin: 0 auto;
   vertical-align: top;
 }
 
@@ -153,13 +159,25 @@ h5{
 }
 
 .box_white a{
-  color: lightblue;
+  color: #6ea3d0;
+;
+}
+
+.content{
+  margin: 5px;
+  line-height: 1.5;
+}
+
+.content ul{
+  margin-left: 50px;
+  /*padding-left: 10px;*/
 }
 
 #footer{
   text-align: center;
   padding: 35px 0 10px 0;
-  color: lightblue;
+  color: #5989b1;
+  background: linear-gradient(#1e405d, #3776ab);
 }
 
 #footer nav{
@@ -172,11 +190,11 @@ h5{
   text-decoration: none; /*removes underlines from links*/
 }
 
-#footer nav li{
+#footer li{
   display: inline; /*makes horizontal nav bar*/
-  color: yellow;
+  padding: 30px; /*creates spacing between list items*/
 }
 
 #footer a{
-  color: lightblue;
+  color: #5989b1;
 }
