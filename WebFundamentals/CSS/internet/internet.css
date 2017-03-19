@@ -1,0 +1,185 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+#container{
+  width: 1200px;
+  height: auto;
+  height: auto;
+  font-family: "Arial", sans-serif;
+}
+
+hr{
+  width: 100%;
+}
+
+li{
+  margin-left: 35px;
+}
+
+h1{
+  background: radial-gradient(closest-side, #b8def5, #0c7cbd);
+  padding: 10px;
+  color: white;
+}
+
+#below_hline img{
+  width: 300px;
+  margin: 5 auto;
+  display: block; /*need this & above to center img*/
+}
+
+.blue{ /* for span text*/
+  color: blue;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.red{
+  color: red;
+}
+
+#top img{
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  position: relative;
+  top: 10px;
+}
+
+#the_internet{
+  display: inline-block;
+  font-size: 50px;
+}
+
+
+h4{
+  margin-top: 8px;
+  margin-bottom: 10px;
+  color: #0c7cbd; 
+}
+
+h2{
+  /*background-color: blue;*/
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+#white_main{
+  background: linear-gradient(#bfbfbf, #FFFFFF, #FFFFFF, #FFFFFF);
+  /*E3E3E3*/
+}
+
+#left{
+  display: inline-block;
+  width: 200px;
+  padding: 5px;
+}
+
+h5{
+  color: white;
+  border-radius: 5px;
+  /*background-color: blue;*/
+  padding: 5px;
+  text-align: center;
+  margin: 5px;
+  box-shadow: 3px 3px 3px gray;
+
+}
+
+h3{
+  color: cyan;
+  text-align: right;
+  padding: 3px;
+}
+
+#right{
+  display: inline-block;
+  vertical-align: top;
+  width: 900px;
+}
+
+#above_hline{
+  padding-bottom: 5px;
+  padding-top: 2px;
+}
+
+#DNS{
+  display: inline-block;
+  position: relative;
+  left: 0;
+}
+
+#DNS img{
+  width: 20px;
+  position: relative;
+  left: 0px;
+  bottom: 25px;
+  display: inline-block;
+}
+
+#DNS p{
+  display: inline-block;
+  position: relative;
+  bottom: 27px;
+}
+
+#hours_phone{
+  display: inline-block;
+  position: relative;
+  left: 620px;
+}
+
+#hours_phone img{
+  width: 45px;
+  display: inline-block;
+}
+
+#text_phone{
+  display: inline-block;
+}
+
+#text_phone p{
+  font-size: 10px;
+}
+
+#ninja_bar{
+  background-image: url("img/ad_background.png");
+}
+
+#ninja_bar img{
+  width: 100px;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+
+.content img{
+  margin: 5px auto;
+}
+
+/* THE BIG 3 */ /* THE BIG 3 *//* THE BIG 3 */
+#big_3{
+  border: 5px blue solid;
+  padding: 10px;
+  margin: 10px auto;
+  width: 650px;
+}
+
+#big_3 img{
+  width: 100px;
+  height: auto;
+  display: inline-block;
+  margin: 10px auto;
+}
+
+#big_3_text{
+  display: inline-block;
+  vertical-align: top;
+  width: 500px;
+  margin: 5px;
+}
