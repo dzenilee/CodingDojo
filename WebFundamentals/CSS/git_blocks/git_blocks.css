@@ -1,0 +1,138 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+#container{
+  background-color: #cacaca;
+  width: 950px;
+  /*height: 800px;*/
+  padding: 10px;
+  font-family: monospace;
+}
+
+.header{
+  background-color: #009688;
+  width: 925px;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#git_basics{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+img{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+h1{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+nav{
+  display: inline-block;
+  /*vertical-align: middle;*/
+}
+
+li{
+  text-decoration: underline; /*remove bullets*/
+  display: inline; /*make nav items horizontal*/
+  /*vertical-align: middle;*/
+  position: relative;
+  top: 15px;
+}
+
+a{
+  color: white;
+}
+
+h2{
+  padding: 5px;
+}
+
+p{
+  padding: 10px;
+}
+
+.box{
+  background-color: #0a463e;
+  padding: 5px;
+  color: white;
+}
+
+#main{
+  background-color: #fcea8b;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+  width: 915px;
+}
+
+#left_box{
+  width: 200px;
+  height: auto;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#right{
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+.bright_text_green{
+  color: cyan;
+}
+
+.top_square_box{
+  display: inline-block;
+  width: 180px;
+  height: 150px;
+  vertical-align: top;
+  margin: 0px 20px 10px 10px;
+}
+
+/*IMPORTANT: Creates space between boxes so that boxes touch side edges of parent*/
+#top_right, #middle_right{
+  display: flex;
+  justify-content: space-between;
+}
+
+.middle_right_box{
+  display: inline-block;
+  width: 300px;
+  height: 150px;
+  vertical-align: top;
+  margin: 10px 20px 20px 10px;
+}
+
+.bottom_right_box{
+  display: inline-block;
+  width: 640px;
+  height: 148px;
+  vertical-align: top;
+  margin: 0px 20px 10px 10px;
+}
+
+#footer{
+  background-color: #009688;
+  width: 945px;
+  height: 80px;
+  /*margin: 15px;*/
+}
+
+#footer p {
+  text-align: center;
+  vertical-align: text-bottom;
+  line-height: 55px;
+
+}
