@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Assignment: Ninja to Cat</title>
+  <link rel="stylesheet" href="ninja_cat.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('img').click(function(){
+      var ninja = $(this).attr('data-alt-src');
+      var cat = $(this).attr('src');
+      $(this).attr('src', ninja);  //.attr( attributeName, value )
+      $(this).attr('data-alt-src', cat);  //.attr( attributeName, value )
+    });
+  })
+  </script>
+</head>
+<body>
+  <h1>Ninja to Cat</h1>
+  <p>When each image slice is clicked, it will change to a different picture.</p>
+  <img src="img/cat0.png" data-alt-src="img/ninja0.png">
+  <img src="img/cat1.png" data-alt-src="img/ninja1.png">
+  <img src="img/cat2.png" data-alt-src="img/ninja2.png">
+  <img src="img/cat3.png" data-alt-src="img/ninja3.png">
+  <img src="img/cat4.png" data-alt-src="img/ninja4.png">
+</body>
+</html>
