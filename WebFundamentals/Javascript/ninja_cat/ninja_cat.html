@@ -11,7 +11,7 @@
       var ninja = $(this).attr('data-alt-src');
       var cat = $(this).attr('src');
       $(this).attr('src', ninja);  //.attr( attributeName, value )
-      $(this).attr('data-alt-src', cat);  //.attr( attributeName, value )
+      $(this).attr('data-alt-src', cat);
     });
   })
   </script>
@@ -19,6 +19,7 @@
 <body>
   <h1>Ninja to Cat</h1>
   <p>When each image slice is clicked, it will change to a different picture.</p>
+  <br>
   <img src="img/cat0.png" data-alt-src="img/ninja0.png">
   <img src="img/cat1.png" data-alt-src="img/ninja1.png">
   <img src="img/cat2.png" data-alt-src="img/ninja2.png">
