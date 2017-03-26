@@ -1,0 +1,47 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+li{
+  margin: 0 10px 0 20px;
+}
+
+body{
+  font-family: "Arial Narrow", sans-serif;
+}
+
+h3{
+  font-family: monospace;
+  margin-top: 5px; 
+}
+
+button{
+  background-color: darkgreen;
+  color: white;
+  border-radius: 5px black;
+  width: 90px;
+  height: 25px;
+}
+
+p{
+  font-size: 11pt;
+  margin: 5px;
+}
+
+img{
+  margin-top: 10px;
+  width: 150px;
+  display: block;
+}
+
+.box{
+  border: 1px gray solid;
+  padding: 0 10px 10px 10px;
+  margin: 20px;
+  width: 600px;
+
+}
+.red{
+  color: red;
+}
