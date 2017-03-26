@@ -1,0 +1,30 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+table{
+  margin: 5px;
+  border: 1px solid black;
+  border-spacing: 10px;
+  border-collapse: separate;
+}
+
+#myDiv{
+  margin: 5px;
+  width: 300px;
+}
+
+#myForm{
+
+  margin: 10px;
+}
+
+form{
+  text-align: right;
+}
+
+button{
+  padding: 3px;
+  background-color: lightgray;
+}
