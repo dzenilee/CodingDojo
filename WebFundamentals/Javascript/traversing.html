@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Traversing</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('#button1').click(function(){
+      $('#myDiv').children().css('background-color', 'green');
+    });
+    $('#button2').click(function(){
+      $('#myDiv').children('p').css('background-color', 'blue');
+    });
+    $('p').click(function(){
+      $(this).parent().append('<h2>I told you I was clickable. :)</h2>')
+    });
+    $('li').click(function(){
+      $(this).siblings().hide();
+    });
+
+  });
+  </script>
+
+</head>
+<body>
+  <div id="myDiv">
+    <p>Here is a beautiful clickable paragraph.</p>
+    <button id='button1' type="button" name="button">$('#myDiv').children().css('background-color', 'green');</button>
+    <br>
+    <button id='button2' type="button" name="button">$('#myDiv').children('p').css('background-color', 'blue');</button>
+    <ul>
+      <li><h3>Tiger Woods (click me to hide my siblings)</h3></li>
+      <li><h3>Phil Mickelson (click me to hide my siblings)</h3></li>
+      <li><h3>Jack Nicklaus (click me to hide my siblings)</h3></li>
+    </ul>
+  </div>
+</body>
+</html>

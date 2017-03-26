@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery for forms</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        alert('Hello!'); //you'll see this as soon as you refresh
+        $('#my_form').submit(function(){ //(1) using .submit() handler as a LISTENER (for when the form is going to be submitted).
+          // alert("You're submitting me.");
+          console.log($(this).serialize()); //make form information into one string.
+          return false; //won't let you submit
+        });
+
+        $('#my_button').click(function(){
+          $('#my_form').submit(); //(2) using .submit() to actually hard submit the form (submit the form without letting user submit the form.)
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form id="my_form" action="process.php" method="post">
+      First name <input type="text" name="first_name" value="">
+      Last name <input type="text" name="last_name" value="">
+      Email <input type="text" name="email" value="">
+      <input type="submit" name="" value="Submit">
+    </form>
+    <button id="my_button" name="button">Click me to use .submit() differently.</button>
+  </body>
+</html>
