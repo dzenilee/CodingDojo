@@ -1,37 +1,82 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>jQuery Test</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function(){/*The $ is how we access the whole jQuery library. Next, add () to the end of $ to utilize jQuery*/
+<head>
+  <meta charset="utf-8">
+  <title>jQuery Test</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript">
+
+  //for Callback demo
+  function attach_h3_handlers(){
+    $('h3').click(function(){
+      alert('You clicked on an h3!');
+    })
+  };
+
+  $(document).ready(function(){/*The $ is how we access the whole jQuery library. Next, add () to the end of $ to utilize jQuery*/
     // The $() is how we select a HTML tag (or any other tag).
 
-      //$('button').click();  **now the document is listening on a click event for the button element!**
-      // $('button').click(function(){
-      //   alert('booh!');
-      // });
+    //$('button').click();  **now the document is listening on a click event for the button element!**
+    // $('button').click(function(){
+    //   alert('booh!');
+    // });
 
-      //getter function
-      // var myText = $('#myParagraph').text();
-      // alert(myText);
+    //getter function
+    // var myText = $('#myParagraph').text();
+    // alert(myText);
 
-      //setter function: when you click on 'button', #myParagraph text changes to text's parameter.
-      $('button').click(function(){
-        $('#myParagraph').text('see how .text() works as a setter!');
-      })
-
-      $('p').prepend('whee! '); //puts text right before p.
-      $('p .dojo').prepend('whee! '); //puts text right after button.
-
+    //setter function: when you click on 'button', #myParagraph text changes to text's parameter.
+    $('#button1').click(function(){
+      $('#para1').text('see how .text() works as a setter!');
     });
-    </script>
-  </head>
-  <body>
-    <button type="button" name="button"></button>
-    <p id="myParagraph">This is my paragraph!</p>
-    <p class="dojo">This is my paragraph!</p>
-    <p class="dojo">This is my paragraph!</p>
-  </body>
+    $('#button2').click(function(){
+      $('#para2').prepend('I\'m .prepend()! '); //puts text right before p.
+    });
+    $('#button3').click(function(){
+      $('#para3').after('I\'m .after()! '); //puts text right after button.
+    });
+
+
+    //.on function to dynamically generated content
+    // $('#new_button').click(function(){
+    //   $('#dynamically').append('<h3>I am an appended dynamically generated h3. If you click me, you will get an alert. And that\'s thanks to .on()!</h3>');
+    // });
+    // $(document).on('click', 'h3', function(){
+    //   alert('You clicked on h3!');
+    // })
+
+    //Callback demo (see function at the top)
+    // attach_h3_handlers();
+    $('#new_new_button').click(function(){
+      $('#dynamically2').append('<h3>I got added using a callback!</h3>');
+      attach_h3_handlers();
+    });
+
+
+
+  });
+
+
+  </script>
+</head>
+<body>
+  <button id='button1' type="button" name="button">.text()</button>
+  <button id='button2' type="button" name="button">.prepend()</button>
+  <button id='button3' type="button" name="button">.after()</button>
+  <p id="para1">This is my paragraph!</p>
+  <p id="para2">This is my paragraph!</p>
+  <p id="para3">This is my paragraph!</p>
+
+  <br>
+  <hr>
+  <br>
+  <button id='new_button' type="button" name="button">I'm a new button</button>
+  <div id="dynamically"></div>
+
+  <br>
+  <hr>
+  <br>
+  <button id='new_new_button' type="button" name="button">I'm a new NEW button</button>
+  <div id="dynamically2"></div>
+</body>
 </html>
