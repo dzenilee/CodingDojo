@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <div id="container">
+    <h2>Here is our clock!</h2>
+    <p id='demo'></p>
+  </div>
+
+  <button onclick="this.innerHTML = Date()" type="button" name="button">Put time on this button</button>
+  <br>
+  <button onclick="displayDate()" type="button" name="button">Put time above buttons</button>
+
+
+  <!-- Begin script --> <!-- Begin script -->
+  <script type="text/javascript">
+  function displayDate(){
+    document.getElementById('demo').innerHTML = Date();
+  }
+
+  setInterval(function(){
+    var clock = document.getElementById('clock');
+    clock.innerHTML = new Date().toString(); //new: construct a new instance of the date class.
+  }, 1000)
+  </script>
+
+
+</body>
+</html>
