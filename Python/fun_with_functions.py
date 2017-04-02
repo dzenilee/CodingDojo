@@ -25,8 +25,11 @@ multiply([2, 4, 10, 16], 5) #[10, 20, 50, 80]
 
 def layered_multiples(arr):
     new_array = []
-    for each in arr:
-        new_array.append("1" * each)
+    for each in arr: #each = 6, 12, 15 
+        inner_array = []
+        for i in range(0, each):
+            inner_array.append(1)
+        new_array.append(inner_array)
     return new_array
 
 x = layered_multiples(multiply([2,4,5],3))
