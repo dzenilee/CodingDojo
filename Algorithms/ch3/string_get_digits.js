@@ -4,8 +4,10 @@ function getDigits(str){
   var num = "0123456789";
   for (var i = 0; i < str.length; i++){
     for (var num = 0; num < 10; num++){
-      if (str[i] == num){
-        newInt += str[i];
+      if (str[i] != " "){
+        if (str[i] == num){
+          newInt += str[i];
+        }
       }
     }
   }
@@ -15,5 +17,5 @@ function getDigits(str){
 str = "hdj2ellosdk399fjsdlfj42skdjfei341"
 console.log(getDigits(str)); //239942341
 
-str2 = "hdj2ellosdk39 9fjsdlfj42skdjfei341" //<-- there's a space
-console.log(getDigits(str2)); //239 <-- why?
+str2 = "hdj2ellosdk39 9fjsdlfj42skdjfei341" //<-- with a space
+console.log(getDigits(str2)); //239942341
