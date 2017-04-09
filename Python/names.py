@@ -30,6 +30,13 @@ users = {
   ]
  }
 
+for each in users['Students']:
+    print each.values()
+    # ['Michael', 'Jordan']
+    # ['John', 'Rosales']
+    # ['Mark', 'Guillen']
+    # ['KB', 'Tonel']
+
 def students_and_instructors(obj):
     for key in obj:
         print key #Students, Instructors
@@ -44,7 +51,7 @@ def students_and_instructors(obj):
             print name_count, str_full_name, char_count-1  #capitalize names
 
 students_and_instructors(users)
-# outputt:
+# output:
 # Students
 # 1 MICHAEL JORDAN 13
 # 2 JOHN ROSALES 11
