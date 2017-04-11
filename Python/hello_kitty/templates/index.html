@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Index page for Hello Kitty</title>
+  </head>
+  <body>
+    <h1>HELLO KITTY!</h1>
+    <!-- {{ session["first_name"] }} -->
+    {{ session["counter"] }}
+    {% with messages = get_flashed_messages() %} <!-- this function gets the flash messages -->
+      {% for message in messages %}
+        <p>{{ message }}</p>
+      {% endfor %}
+      {% endwith %}
+    <form action="/users" method="post">
+      <input type="hidden" name="id" value="{{session['counters']}}"> <!-- to hide from user -->
+      <input type="text" name="first_name" placeholder="First Name">
+      <input type="text" name="email" placeholder="Joe@somethinghere.net">
+      <button type="submit" name="button">Send Me!</button>
+    </form>
+    <a href="/clear">Clear Session</a>
+  </body>
+</html>
