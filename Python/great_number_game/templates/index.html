@@ -10,15 +10,20 @@
   <p>I am thinking of a number between 1 and 100.</p>
   <p>Take a wild guess!</p>
 
-  {% if session['userGuess'] == session['randomNum'] %}
+
+  {% if session['result'] == 'correct' %}
   <div class="square" id="correct">
     <h3>You're correct!</h3>
+
+    <form class="" action="/reset" method="post">
+      <input type="submit" name="reset" value="Play again">
+    </form>
   </div>
-  {% elif session['userGuess'] > session['randomNum'] %}
+  {% elif session['result'] == 'high' %}
   <div class="square incorrect">
     <h3>Too high!</h3>
   </div>
-  {% elif session['userGuess'] < session['randomNum'] %}
+  {% elif session['result'] == 'low' %}
   <div class="square incorrect">
     <h3>Too low!</h3>
   </div>
@@ -28,6 +33,5 @@
     <input type="text" name="number" value="">
     <input type="submit" name="submit" value="Submit">
   </form>
-
 </body>
 </html>

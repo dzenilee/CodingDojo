@@ -11,7 +11,7 @@ def index():
 @app.route('/guess', methods=['POST'])
 def guess():
     #store and print random number generated
-    session['randomNum'] = random.randrange(0, 101)
+    session['randomNum'] = random.randrange(0, 4)
     print "The random number generated is", session['randomNum']
 
     #store and print user's guess
@@ -20,11 +20,16 @@ def guess():
 
     #logic check
     if session['userGuess'] == session['randomNum']:
-        print 'correct'
+        session['result'] = 'correct'
     elif session['userGuess'] > session['randomNum']:
-        print 'too high!'
+        session['result'] = 'high'
     elif session['userGuess'] < session['randomNum']:
-        print 'too low!'
+        session['result'] = 'low'
     return redirect('/')
 
+@app.route('/reset', methods=['POST'])
+def reset():
+    session.clear()
+    return redirect('/')
+    
 app.run(debug=True)
