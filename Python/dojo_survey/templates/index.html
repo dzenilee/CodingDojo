@@ -6,34 +6,37 @@
   <link rel="stylesheet" type='text/css' href="{{ url_for('static', filename='stylesheet.css') }}">
 </head>
 <body>
-  <h1>test</h1>
-  <form class="" action="/result" method="post">
-    <div class="section">
-      <label for="name">Name</label>
-      <input type="text" name="name" value="">
-    </div>
+  <div id="container">
+    <form class="" action="/result" method="post">
+      <div class="section">
+        <label for="name">Name</label>
+        <input id="user_name" type="text" name="name" value="">
+      </div>
 
-    <div class="section">
-      <label for="location">Dojo Location</label>
-      <select class="" name="location">
-        <option value="">San Jose</option>
-        <option value="">San Francisco</option>
-      </select>
-    </div>
+      <div class="section">
+        <label for="location">Dojo Location</label>
+        <select class="pulldown" name="location">
+          <option value="">San Jose</option>
+          <option value="">San Francisco</option>
+        </select>
+      </div>
 
-    <div class="section">
-      <p><label for="language">Favorite Language</label></p>
-      <select class="" name="language">
-        <option value="">Python</option>
-        <option value="">JavaScript</option>
-      </select>
-    </div>
+      <div class="section">
+        <label for="language">Favorite Language</label>
+        <select class="pulldown" name="language">
+          <option value="">Python</option>
+          <option value="">JavaScript</option>
+        </select>
+      </div>
 
-    <div class="section">
-      <p><label for="comment">Comment (optional)</label></p>
-      <textarea name="comment" rows="8" cols="50"></textarea>
-    <input type="submit" name="" value="Button">
+      <div class="section">
+        <label for="comment">Comment (optional)</label>
+        <br>
+        <textarea name="comment" rows="8" cols="80"></textarea>
+        <br>
+        <input id="submit" type="submit" name="" value="Submit">
+      </div>
+    </form>
   </div>
-  </form>
 </body>
 </html>
