@@ -4,10 +4,11 @@
   <meta charset="utf-8">
   <title>Dojo Survey Index</title>
   <link rel="stylesheet" type='text/css' href="{{ url_for('static', filename='stylesheet.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 <body>
   <div id="container">
-    <form class="" action="/result" method="post">
+    <form class="" action="/result" method="post" required>
       <div class="section">
         <label for="name">Name</label>
         <input id="user_name" type="text" name="name" value="">
@@ -16,16 +17,16 @@
       <div class="section">
         <label for="location">Dojo Location</label>
         <select class="pulldown" name="location">
-          <option value="">San Jose</option>
-          <option value="">San Francisco</option>
+          <option value="San Jose">San Jose</option>
+          <option value="San Francisco">San Francisco</option>
         </select>
       </div>
 
       <div class="section">
         <label for="language">Favorite Language</label>
         <select class="pulldown" name="language">
-          <option value="">Python</option>
-          <option value="">JavaScript</option>
+          <option value="Python">Python</option>
+          <option value="JavaScript">JavaScript</option>
         </select>
       </div>
 
@@ -38,5 +39,18 @@
       </div>
     </form>
   </div>
+
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <script>
+        var messages = {{ messages | safe }};
+        for (var i = 0; i < messages.length; i++){
+          alert(messages[i]);
+        }
+      </script>
+
+    {% endif %}
+  {% endwith %}
+
 </body>
 </html>
