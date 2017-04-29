@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+  <title></title>
+</head>
+<body>
+  <h1>hello {{ session['name'] }}!!!</h1>
+  <ul>
+    {% for item in my_list %}
+    <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+  <p>{{ my_list }}</p>
+  <h4>{{ session['high_score'] }}</h4>
+
+  <!-- begin name_form -->
+  <form class="" action="/dojo/new" method="post">
+    <input type="hidden" name="which_form" value="name_form">
+    <label for="text">name:</label>
+    <input type="text" name="text" value="">
+    <input type="submit" name="submit" value="Submit">
+  </form>
+
+  <!-- begin age_form -->
+  <form class="" action="/dojo/new" method="post">
+  <input type="hidden" name="which_form" value="age_form">
+  <label for="text">age:</label>
+  <input type="number" name="age" value="">
+  <label for="email">email:</label>
+  <input type="text" name="email" value="">
+  <label for="password">password:</label>
+  <input type="password" name="" value=""> <!-- not going to send this data over the form, so no need to give name attribute -->
+  <input type="submit" name="submit" value="Submit">
+</form>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+    <p class='error'>{{ message }}</p>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+</body>
+</html>

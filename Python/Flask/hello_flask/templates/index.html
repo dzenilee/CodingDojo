@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title>index</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/my_style_sheet.css') }}">
+  <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/my_script.js')}}">
+  </script> -->
+</head>
+  <body>
+    <h1>{% if 'user' in session %}{{ session['user']['first_name'] }}! {% endif %} Guess what, I'm using Flask!</h1>
+    <!-- <h3>Number of people in our list: {{ session['counter'] }}</h3> -->
+    <h3>Next available ID is {{session['counter']}}</h3>
+    {% with messages = get_flashed_messages() %} <!-- with creates variables on your template -->
+    {% if messages %}
+    {% for message in messages %}
+    <p>{{message}}</p>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <form class="" action="/user" method="post">
+      <input type="hidden" name="count" value="{{ session['counter'] }}">
+      <input type="text" name="fname" placeholder="First Name">
+      <input type="text" name="lname" placeholder="Last Name">
+      <input type="text" name="email" value="name@abc.com">
+      <button type="submit" name="form_submit">Submit</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>id</th>
+          <th>Show</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% if "users" in session %}
+        {% for user in session['users'] %}
+        <tr>
+          <td>{{ user['first_name'] }}</td>
+          <td>{{ user['last_name'] }}</td>
+          <td>{{ user['email'] }}</td>
+          <td>{{ user['id'] }}</td>
+          <td><a href="/user/{{user['id']}}">Show</a></td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+      </tbody>
+    </table>
+
+    <a href="/clear">Clear Session</a>
+  </body>
+</html>

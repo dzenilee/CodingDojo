@@ -1,0 +1,23 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+.square{
+  width: 200px;
+  height: 200px;
+}
+
+div{
+  margin: auto;
+
+}
+
+.incorrect{
+  background-color: red;
+}
+
+#correct{
+  background-color: green;
+}

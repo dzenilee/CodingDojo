@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Counter</title>
+</head>
+<body>
+  <h1>Counter</h1>
+  <h3>This page has been visited {{ session['counter'] }} times!</h3>
+  <form class="" action="/more" method="post">
+    <input type="submit" name="counter" value="incrementBy2">
+  </form>
+  
+  <form class="" action="/more" method="post">
+    <input type="submit" name="counter" value="reset">
+  </form>
+</body>
+</html>
