@@ -1,0 +1,15 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+img{
+  margin: auto;
+  width: 400px;
+  height: auto;
+}
+
+#ninja{
+  margin: auto 15px;
+  width: 800px;
+}
