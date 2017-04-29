@@ -1,0 +1,26 @@
+<!-- Create a website that has all the pictures of the original Pokemon (Pokemon #1 ~ Pokemon #151). Use the PokeAPI to get the images. You can find the image of the first Pokemon on  http://pokeapi.co/media/img/1.png, second Pokemon on http://pokeapi.co/media/img/2.png, third Pokemon on http://pokeapi.co/media/img/3.png, and so on. (Copy and paste those URLs. Hotlinking has been prohibited by pokeapi.)
+
+You can list out 151 images or you can use a for loop (use a for loop).
+ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokemon</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        for (var i = 1; i <= 151; i++){
+          var pokemon = "http://pokeapi.co/media/img/" + i + ".png"
+          $('body').append('<img src=' + pokemon + ' alt=' + i + '>')
+        }
+      })
+    </script>
+  </head>
+  <body>
+    <div monsters="">
+
+    </div>
+  </body>
+</html>
