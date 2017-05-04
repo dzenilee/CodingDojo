@@ -1,5 +1,5 @@
 -- 1. What query would you run to get the total revenue for March of 2012? //35646 
-SELECT SUM(amount) 
+SELECT MONTHNAME(billing.charged_datetime) AS month, SUM(amount) 
 FROM billing 
 WHERE MONTH(billing.charged_datetime) = 3 AND YEAR(billing.charged_datetime) = 2012; 
 
