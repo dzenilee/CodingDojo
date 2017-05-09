@@ -14,6 +14,7 @@ def index():
     # show all friends in DB
     all_query = "SELECT * FROM friends"
     all_stored = mysql.query_db(all_query)
+    # all_friends is a variable in index.html 
     return render_template('index.html', all_friends = all_stored)
 
 # Handle the add friend form submit and create the friend in the DB
@@ -24,6 +25,7 @@ def create():
         'last_name': request.form['last_name'],
         'email': request.form['email']
     }
+    # logic, validation
     if len(data['email']) < 1:
         flash('Email cannot be left blank!')
     elif not EMAIL_REGEX.match(data['email']):
