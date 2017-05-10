@@ -16,15 +16,23 @@ def index():
 
 @app.route('/register', methods=['POST'])
 def register():
+    # get user data from form
     first_name = request.form['first_name']
     last_name = request.form['last_name']
     email = request.form['email']
     password = request.form['password']
     # run validations and if they're successful, create the password hash with bcrypt
+    # validate name
     if len(first_name) < 2:
         flash('First name cannot be left blank!')
     elif len(last_name) < 2:
         flash('Last name cannot be left blank!')
+    # validate email
+    if len(email) < 1:
+        flash('Email cannot be left blank!')
+    elif not EMAIL_REGEX.match(email):
+        flash('Email is not valid!')
+    # if all validations successful
     else:
         # create password hash with bcrypt
         pw_hash = bcrypt.generate_password_hash(password)
@@ -37,8 +45,11 @@ def register():
             'email': email,
             'pw_hash': pw_hash
         }
-        mysql.query_db(add_query, query_data)
+        # record of new user in a list
+        record = mysql.query_db(add_query, query_data)
         flash('Congratulations! You have successfully created a new account.')
+        # place new record (user) in session
+        session['id'] = record[0]['id']
     return redirect('/')
 
 @app.route('/login', methods=['POST'])
@@ -49,13 +60,16 @@ def login():
     query_data = {
         'email': email
     }
-    user_info = mysql.query_db(user_query, query_data)
+    # return user record in a list
+    record = mysql.query_db(user_query, query_data)
     # If both the password and the existing password hash are a match, log in user.
-    if bcrypt.check_password_hash(user_info[0]['pw_hash'], password):
+    if bcrypt.check_password_hash(record[0]['pw_hash'], password):
         # login user
-        return render_template('success.html')
+        print 'password hash:', record[0]['pw_hash']
+        # 'user' is the variable that's in the success template
+        return render_template('success.html', user=record[0]['first_name'])
     else:
         flash('Your email and password do not match! Try again.')
         return redirect('/')
-
+        
 app.run(debug=True)
