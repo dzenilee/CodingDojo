@@ -3,20 +3,40 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>The Wall</title>
+    <title>User Registration and Login</title>
   </head>
   <body>
-    <div id="header">
-      <h1>CodingDojo Wall</h1>
-      <h3>Welcome {{ session['first_name'] }}</h3>
-      <h4><a href="#">log off</a></h4>
-    </div> <!-- End header -->
+    <h1>Register a user account</h1>
+    <form class="" action="/register" method="post">
+      <label for="first_name">First Name:</label>
+      <input type="text" name="first_name" value="">
+      <label for="last_name">Last Name:</label>
+      <input type="text" name="last_name" value="">
+      <label for="email">Email:</label>
+      <input type="text" name="email" value="">
+      <label for="password">Password:</label>
+      <input type="text" name="password" value="">
+      <label for="password">Confirm Password:</label>
+      <input type="text" name="confirm_password" value="">
+      <input type="submit" name="" value="Create Account">
+    </form>
 
-    <div class="msg_section">
-      <h2>Post a message</h2>
-      <div class="msg_box">
-      </div>
-      <input id="msg_button" type="submit" name="" value="Post a message">
-    </div> <!-- End msg_section -->
+    <h1>Login</h1>
+    <form class="" action="/login" method="post">
+      <label for="email">Email:</label>
+      <input type="text" name="email" value="">
+      <label for="password">Password:</label>
+      <input type="text" name="password" value="">
+      <input type="submit" name="" value="Login">
+    </form>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <p>{{ message }}</p>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
   </body>
 </html>

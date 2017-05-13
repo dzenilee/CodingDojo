@@ -6,20 +6,47 @@
 body{
   margin: 10px;
   padding: 10px;
+  font-family: inherit;
 }
 
 #header{
   border-bottom: 1px solid black;
 }
 
+.right{
+  float: right;
+}
+
 #msg_box{
-  width: 500px;
-  height: 200px;
-  border: 1px solid black;
+  margin-left: 5px;
+  margin-bottom: 25px;
+}
+
+#display_messages p{
+  margin-left: 15px;
+}
+
+#comment_box{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#display_comments{
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.post_button{
+  color: white;
+  padding: 3px;
+  position: relative;
+  left: 470px;
 }
 
 #msg_button{
-  color: white;
   background-color: blue;
+}
 
+#comment_button{
+  background-color: green;
 }
