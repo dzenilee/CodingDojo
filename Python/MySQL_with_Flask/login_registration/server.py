@@ -47,9 +47,10 @@ def register():
         }
         # record of new user in a list
         record = mysql.query_db(add_query, query_data)
+        print 'this is my record: ', record # prints id number 
         flash('Congratulations! You have successfully created a new account.')
         # place new record (user) in session
-        session['id'] = record[0]['id']
+        # session['id'] = record[0]['id']
     return redirect('/')
 
 @app.route('/login', methods=['POST'])
@@ -71,5 +72,5 @@ def login():
     else:
         flash('Your email and password do not match! Try again.')
         return redirect('/')
-        
+
 app.run(debug=True)
