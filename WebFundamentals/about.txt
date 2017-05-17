@@ -1,0 +1,2 @@
+This folder contains assignments related to Web Fundamentals. 
+HTML, CSS, JavaScript, jQuery, Git, Terminal 
