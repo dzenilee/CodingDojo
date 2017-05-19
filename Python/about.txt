@@ -1,2 +1,2 @@
 This folder contains assignments related to Python. 
-Python Stack - MySQL, Python, Python OOP, Flask, Pylot MVC, Ajax, PostgreSQL, AWS.
+Python Stack: Flask, MySQL, Python, Python OOP, Pylot MVC, Ajax, PostgreSQL, AWS
