@@ -15,7 +15,6 @@ class Car(object):
             self.tax = .15 * self.price
         elif self.price < 10000:
             self.tax = .12 * self.price
-
     def display_all(self):
         print "Price:", self.price
         print "Speed:", self.speed
