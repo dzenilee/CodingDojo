@@ -13,9 +13,14 @@ which should perform 0+2+(2+5)-(3+2) and return 4.
 """
 
 class MathDojo(object):
-    def add(arg1, *args):
-        return arg1 + args
-    def subtract(arg1, *args):
-        return -(arg1 + args)
+    def __init__(self):
+        self.result = 0
+    def add(self, *args):
+        self.result += args
+        return self
+    def subtract(self, *args):
+        self.result -= args
+        return self
 
-print MathDojo().add(2).add(2, 5).subtract(3, 2).result
+md = MathDojo()
+print md.add(2).add(2, 5).subtract(3, 2).result
