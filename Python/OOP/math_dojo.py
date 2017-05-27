@@ -85,4 +85,4 @@ class MathDojo(object):
                 self.result -= arg
         return self
 
-print MathDojo().add((1,6,7,8,9)).subtract(2, [3, 4, 2, -1, 3, 2]).add([2,3,4,5], 2).result # 32 
+print MathDojo().add((1,6,7,8,9)).subtract(2, [3, 4, 2, -1, 3, 2]).add([2,3,4,5], 2).result # 32
