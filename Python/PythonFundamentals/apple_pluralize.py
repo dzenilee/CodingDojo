@@ -3,7 +3,7 @@ def pluralize(singular_arr):
     vowel = ["a", "i", "u", "e"]
     coronal = ["s", "r"]
     for singular in singular_arr:
-        if singular[-1:] in vowel: # for all vowel-ending singular forms,
+        if singular[-1:] in vowel: # for all vowel-final singular forms,
             if singular[-2:] == "ie": # if singular form ends in -ie,
                 if singular[-3] in coronal: # and it's preceded by a coronal,
                     plural_arr.append(singular+"En") # -sieEn or -rieEn
@@ -19,4 +19,4 @@ def pluralize(singular_arr):
 singular_arr = ["berie", "kasie", "karie", "sona", "soni", "sonu", "sonou", "sone"]
 pluralize(singular_arr)
 
-# output = ['berieEn', 'beries', 'kasieEn', 'kasies', 'karieEn', 'karies', "sona's", "soni's", "sonu's", "sonou's", 'sones']
+# output = ['berieEn', 'kasieEn', 'karieEn', "sona's", "soni's", "sonu's", 'sonous', 'sones']
