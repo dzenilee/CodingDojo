@@ -16,3 +16,5 @@ def pluralize(singular_arr):
 
 singular_arr = ["berie", "kasie", "karie", "sona", "soni", "sonu", "sonou", "sone"]
 pluralize(singular_arr)
+
+# output = ['berieEn', 'beries', 'kasieEn', 'kasies', 'karieEn', 'karies', "sona's", "soni's", "sonu's", "sonou's", 'sones']
